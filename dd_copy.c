@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
         if (argc%2 != 1) {
                 printf("USAGE: %s -i <input> -o <output>\n", argv[0]);
+                exit(1);
         }
         int i;
         int BUFFER_SIZE = 512;
