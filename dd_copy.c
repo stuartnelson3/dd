@@ -10,14 +10,11 @@ int main(int argc, char *argv[])
         int BUFFER_SIZE = 512;
         FILE *input, *output;
         for(i=1; i<argc; ++i) {
-                printf("argument %d : %s\n", i, argv[i]);
                 if (strcmp(argv[i], "-i") == 0) {
-                        printf("flag matches\n");
                         ++i;
                         input = fopen(argv[i], "r+");
                 }
                 if (strcmp(argv[i], "-o") == 0) {
-                        printf("flag matches\n");
                         ++i;
                         output = fopen(argv[i], "w");
                 }
