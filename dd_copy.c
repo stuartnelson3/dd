@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
                 if (strcmp(argv[i], "-o") == 0) {
                         printf("flag matches\n");
                         ++i;
-                        output = fopen(argv[i], "r+");
+                        output = fopen(argv[i], "w");
                 }
         }
         if (!input) input = stdin;
