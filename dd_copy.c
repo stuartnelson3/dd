@@ -20,6 +20,11 @@ int main(int argc, char *argv[])
                         ++i;
                         output = fopen(argv[i], "w");
                 }
+                if (strcmp(argv[i], "-b") == 0) {
+                        ++i;
+                        BUFFER_SIZE = atoi(argv[i]);
+                        if (BUFFER_SIZE < 4) BUFFER_SIZE = 512;
+                }
         }
         if (!input) input = stdin;
         if (!output) output = stdout;
